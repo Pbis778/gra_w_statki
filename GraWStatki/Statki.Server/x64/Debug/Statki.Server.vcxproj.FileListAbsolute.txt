@@ -1,2 +1,0 @@
-C:\Users\pbist\OneDrive\Dokumenty\GitHub\gra_w_statki\GraWStatki\Statki.Server\x64\Debug\Statki.Server.vcxproj.AssemblyReference.cache
-C:\Users\pbist\OneDrive\Dokumenty\GitHub\gra_w_statki\GraWStatki\Statki.Server\x64\Debug\Statki.S.7A3A8767.Up2Date

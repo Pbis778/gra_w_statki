@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\kubac\Documents\GitHub\AI\gra_w_statki\GraWStatki\Statki.Client\App.xaml
-11407045341
+2396499192
 
-42108086877
+5-1157319198
 199-1370820530
-MainWindow.xaml;
+GameWindow.xaml;MainWindow.xaml;
 
 False
 

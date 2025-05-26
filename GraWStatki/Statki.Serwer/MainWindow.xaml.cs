@@ -1,23 +1,19 @@
-﻿using System.Net.Sockets;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Statki.Serwer
 {
     public partial class MainWindow : Window
     {
         private TcpListener listener;
-        private TcpClient client;
-        private NetworkStream stream;
+        private readonly List<TcpClient> clients = new List<TcpClient>();
+        private readonly List<NetworkStream> streams = new List<NetworkStream>();
+        private const int MaxClients = 2;
 
         public MainWindow()
         {
@@ -39,35 +35,56 @@ namespace Statki.Serwer
                 listener.Start();
                 Log("Serwer nasłuchuje na porcie 8080...");
 
-                client = await listener.AcceptTcpClientAsync();
-                Log("Połączono z klientem!");
+                while (true)
+                {
+                    var newClient = await listener.AcceptTcpClientAsync();
 
-                stream = client.GetStream();
-                await ReceiveMessagesAsync();
+                    if (clients.Count >= MaxClients)
+                    {
+                        Log("Odrzucono połączenie: limit 2 graczy.");
+                        using var rejectStream = newClient.GetStream();
+                        byte[] rejectMsg = Encoding.UTF8.GetBytes("Serwer pełny - tylko 2 graczy może się połączyć.");
+                        await rejectStream.WriteAsync(rejectMsg, 0, rejectMsg.Length);
+                        newClient.Close();
+                        continue;
+                    }
+
+                    clients.Add(newClient);
+                    var stream = newClient.GetStream();
+                    streams.Add(stream);
+
+                    Log($"Gracz {clients.Count} dołączył.");
+                    _ = ReceiveMessagesAsync(newClient, stream);
+                }
             }
             catch (Exception ex)
             {
-                Log("Błąd: " + ex.Message);
+                Log("Błąd serwera: " + ex.Message);
             }
         }
 
-        private async Task ReceiveMessagesAsync()
+        private async Task ReceiveMessagesAsync(TcpClient client, NetworkStream stream)
         {
             byte[] buffer = new byte[1024];
             try
             {
-                while (true)
+                while (client.Connected)
                 {
                     int length = await stream.ReadAsync(buffer, 0, buffer.Length);
                     if (length == 0) break;
 
                     string message = Encoding.UTF8.GetString(buffer, 0, length);
-                    Log("Odebrano: " + message);
+                    Log($"Odebrano: {message}");
 
-                    // Odpowiedź (opcjonalna)
-                    string response = "Odebrano: " + message;
-                    byte[] responseData = Encoding.UTF8.GetBytes(response);
-                    await stream.WriteAsync(responseData, 0, responseData.Length);
+                    // Broadcast do drugiego gracza
+                    foreach (var s in streams)
+                    {
+                        if (s != stream) // Nie wysyłaj do nadawcy
+                        {
+                            byte[] responseData = Encoding.UTF8.GetBytes(message);
+                            await s.WriteAsync(responseData, 0, responseData.Length);
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -76,11 +93,12 @@ namespace Statki.Serwer
             }
             finally
             {
+                int index = clients.IndexOf(client);
+                clients.Remove(client);
+                streams.Remove(stream);
                 stream?.Close();
                 client?.Close();
-                listener?.Stop();
-                Log("Połączenie zamknięte.");
-                btnStart.IsEnabled = true;
+                Log($"Gracz {index + 1} odłączony.");
             }
         }
 
