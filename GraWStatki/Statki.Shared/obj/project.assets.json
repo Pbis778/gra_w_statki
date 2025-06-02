@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\kubac\\.nuget\\packages\\": {},
+    "C:\\Users\\Piotrek\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Statki.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\Piotrek\\Documents\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Shared\\Statki.Shared.csproj",
       "projectName": "Statki.Shared",
-      "projectPath": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Statki.Shared.csproj",
-      "packagesPath": "C:\\Users\\kubac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\obj\\",
+      "projectPath": "C:\\Users\\Piotrek\\Documents\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Shared\\Statki.Shared.csproj",
+      "packagesPath": "C:\\Users\\Piotrek\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Piotrek\\Documents\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\kubac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Piotrek\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -51,7 +51,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

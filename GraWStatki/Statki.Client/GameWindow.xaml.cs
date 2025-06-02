@@ -1,37 +1,32 @@
 ﻿using Statki.Shared.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+using System.Windows.Controls.Primitives;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Statki.Client
 {
     public partial class GameWindow : Window
     {
-        private GameBoard _board;
-        private TcpClient client;
-        private NetworkStream stream;
+        private GameBoard _playerBoard;
+        private TcpClient? client;
+        private NetworkStream? stream;
 
         public GameWindow(TcpClient client, NetworkStream stream)
         {
             InitializeComponent();
             this.client = client;
             this.stream = stream;
-            _board = new GameBoard();
-            GenerateGrid();
+
+            _playerBoard = new GameBoard();
+
+            GenerateGrid(PlayerGrid, isPlayer: true);
+            GenerateGrid(EnemyGrid, isPlayer: false);
         }
 
-        private void GenerateGrid()
+        private void GenerateGrid(UniformGrid grid, bool isPlayer)
         {
             for (int y = 0; y < GameBoard.Size; y++)
             {
@@ -41,23 +36,37 @@ namespace Statki.Client
                     {
                         Tag = (x, y),
                         Margin = new Thickness(1),
-                        Background = Brushes.LightBlue
+                        Background = isPlayer ? Brushes.LightBlue : Brushes.LightGray
                     };
 
-                    cell.Click += Cell_Click;
-                    GameGrid.Children.Add(cell);
+                    cell.Click += isPlayer ? PlayerGrid_Click : EnemyGrid_Click;
+
+                    grid.Children.Add(cell);
                 }
             }
         }
 
-        private void Cell_Click(object sender, RoutedEventArgs e)
+        private void PlayerGrid_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button btn && btn.Tag is ValueTuple<int, int> coords)
             {
                 int x = coords.Item1;
                 int y = coords.Item2;
-                MessageBox.Show($"Kliknięto pole ({x}, {y})");
-                // tutaj możesz wysłać strzał do serwera lub zaznaczyć miejsce
+                MessageBox.Show($"Twoja plansza – kliknięto pole ({x}, {y})");
+                //w przyszłości: rozmieszczanie statków
+            }
+        }
+
+        private void EnemyGrid_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && btn.Tag is ValueTuple<int, int> coords)
+            {
+                int x = coords.Item1;
+                int y = coords.Item2;
+                MessageBox.Show($"Strzał na planszy przeciwnika – pole ({x}, {y})");
+                btn.Background = Brushes.DarkGray;
+
+                //TODO: wysłanie strzału do serwera
             }
         }
     }

@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\kubac\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\kubac\\.nuget\\packages",
+      "C:\\Users\\Piotrek\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Piotrek\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
