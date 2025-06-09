@@ -2,7 +2,9 @@
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Statki.Client
 {
@@ -12,28 +14,23 @@ namespace Statki.Client
         private NetworkStream stream;
         private Thread listenThread;
         private volatile bool isListening = false; // flaga do kontrolowania pętli
+        private Window waitingWindow;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void ConnectToServer(string ip)
+        private async void ConnectToServer(string ip)
         {
             try
             {
                 client = new TcpClient();
-                client.Connect(ip, 8080);
+                await client.ConnectAsync(ip, 8080);
                 stream = client.GetStream();
 
-                MessageBox.Show("Połączono z serwerem!");
+                StartListening();
 
-                StartListening(); // Uruchom nasłuchiwanie od serwera
-
-                this.Hide();
-
-                var gameWindow = new GameWindow(client, stream); // Przekaż połączenie do GameWindow
-                gameWindow.Show();
             }
             catch (Exception ex)
             {
@@ -63,7 +60,6 @@ namespace Statki.Client
                         }
                         else
                         {
-                            // Połączenie zamknięte od serwera (length == 0)
                             Dispatcher.Invoke(() =>
                             {
                                 MessageBox.Show("Serwer rozłączył połączenie.");
@@ -74,7 +70,7 @@ namespace Statki.Client
                     }
                     catch (Exception)
                     {
-                        if (isListening) // jeśli nie zamknęliśmy sami
+                        if (isListening)
                         {
                             Dispatcher.Invoke(() =>
                             {
@@ -93,9 +89,64 @@ namespace Statki.Client
 
         private void HandleServerMessage(string message)
         {
-            // Przykładowa obsługa komunikatu z serwera
-            MessageBox.Show("Wiadomość z serwera: " + message);
-            // W przyszłości tutaj można przesyłać dane do GameWindow
+            switch (message)
+            {
+                case "WAIT":
+                    ShowWaitingWindow();
+                    break;
+
+                case "START":
+                    CloseWaitingWindow();
+                    this.Hide();
+                    var gameWindow = new GameWindow(client, stream);
+                    gameWindow.Show();
+                    break;
+
+                default:
+                    MessageBox.Show("Wiadomość z serwera: " + message);
+                    break;
+            }
+        }
+
+        private void ShowWaitingWindow()
+        {
+            if (waitingWindow == null)
+            {
+                waitingWindow = new Window
+                {
+                    Title = "Oczekiwanie",
+                    Width = 300,
+                    Height = 150,
+                    WindowStartupLocation = WindowStartupLocation.CenterScreen,
+                    ResizeMode = ResizeMode.NoResize,
+                    Content = new Grid
+                    {
+                        Children =
+        {
+            new TextBlock
+            {
+                Text = "Oczekiwanie na przeciwnika...",
+                FontSize = 16,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                TextAlignment = TextAlignment.Center,
+                TextWrapping = TextWrapping.Wrap
+            }
+        }
+                    }
+                };
+
+                waitingWindow.Show();
+            }
+        }
+
+        private void CloseWaitingWindow()
+        {
+            if (waitingWindow != null)
+            {
+                waitingWindow.Close();
+                waitingWindow = null;
+            }
         }
 
         private void SendMessage(string message)
@@ -110,18 +161,9 @@ namespace Statki.Client
         {
             isListening = false;
 
-            try
-            {
-                stream?.Close();
-            }
-            catch { }
-            try
-            {
-                client?.Close();
-            }
-            catch { }
+            try { stream?.Close(); } catch { }
+            try { client?.Close(); } catch { }
 
-            // Zamknij wszystkie okna aplikacji (łącznie z MainWindow i GameWindow)
             Application.Current.Shutdown();
         }
 

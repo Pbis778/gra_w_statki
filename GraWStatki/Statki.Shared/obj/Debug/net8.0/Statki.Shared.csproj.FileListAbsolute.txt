@@ -34,3 +34,15 @@ C:\Users\Piotrek\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debu
 C:\Users\Piotrek\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\refint\Statki.Shared.dll
 C:\Users\Piotrek\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\Statki.Shared.pdb
 C:\Users\Piotrek\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\ref\Statki.Shared.dll
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\bin\Debug\net8.0\Statki.Shared.deps.json
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\bin\Debug\net8.0\Statki.Shared.dll
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\bin\Debug\net8.0\Statki.Shared.pdb
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\Statki.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\Statki.Shared.AssemblyInfoInputs.cache
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\Statki.Shared.AssemblyInfo.cs
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\Statki.Shared.csproj.CoreCompileInputs.cache
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\Statki.Shared.sourcelink.json
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\Statki.Shared.dll
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\refint\Statki.Shared.dll
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\Statki.Shared.pdb
+C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Shared\obj\Debug\net8.0\ref\Statki.Shared.dll

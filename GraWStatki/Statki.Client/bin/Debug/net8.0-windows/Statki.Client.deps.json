@@ -16,10 +16,7 @@
       },
       "Statki.Shared/1.0.0": {
         "runtime": {
-          "Statki.Shared.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Statki.Shared.dll": {}
         }
       }
     }

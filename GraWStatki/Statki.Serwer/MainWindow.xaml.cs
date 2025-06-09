@@ -51,7 +51,23 @@ namespace Statki.Serwer
 
                     clients.Add(newClient);
                     var stream = newClient.GetStream();
-                    streams.Add(stream);
+
+                    if (clients.Count == 1)
+                    {
+                        byte[] waitMsg = Encoding.UTF8.GetBytes("WAIT");
+                        await stream.WriteAsync(waitMsg, 0, waitMsg.Length);
+                        Log("Pierwszy gracz dołączył, czeka na przeciwnika...");
+                    }
+                    else if (clients.Count == 2)
+                    {
+                        foreach (var client in clients)
+                        {
+                            var clientStream = client.GetStream();
+                            byte[] startMsg = Encoding.UTF8.GetBytes("START");
+                            await clientStream.WriteAsync(startMsg, 0, startMsg.Length);
+                        }
+                        Log("Drugi gracz dołączył - start gry");
+                    }
 
                     Log($"Gracz {clients.Count} dołączył.");
                     _ = ReceiveMessagesAsync(newClient, stream);
@@ -76,10 +92,9 @@ namespace Statki.Serwer
                     string message = Encoding.UTF8.GetString(buffer, 0, length);
                     Log($"Odebrano: {message}");
 
-                    // Broadcast do drugiego gracza
                     foreach (var s in streams)
                     {
-                        if (s != stream) // Nie wysyłaj do nadawcy
+                        if (s != stream)
                         {
                             byte[] responseData = Encoding.UTF8.GetBytes(message);
                             await s.WriteAsync(responseData, 0, responseData.Length);
