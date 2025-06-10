@@ -6,6 +6,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <!-- Dodano wiersz dla tekstu -->
         </Grid.RowDefinitions>
 
         <TextBlock Text="Gra w statki" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
@@ -76,6 +78,7 @@
 
                     <UniformGrid Grid.Row="1" Grid.Column="1" Grid.RowSpan="10" Grid.ColumnSpan="10" Name="PlayerGrid" Rows="10" Columns="10" Margin="5"/>
                 </Grid>
+
             </StackPanel>
 
             <StackPanel Grid.Column="1" />
@@ -142,5 +145,8 @@
             </StackPanel>
 
         </Grid>
+
+        <TextBlock Grid.Row="2" Text="Faza rozmieszczania statków: R - Obróć statek horyzontalnie/wertykalnie" 
+                   FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10"/>
     </Grid>
 </Window>

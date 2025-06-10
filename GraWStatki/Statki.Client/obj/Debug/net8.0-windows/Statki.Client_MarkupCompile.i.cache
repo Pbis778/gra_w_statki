@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Client\obj\Debug\net8.0-windows\
+C:\Users\kubac\Documents\GitHub\AI\gra_w_statki\GraWStatki\Statki.Client\obj\Debug\net8.0-windows\
 Statki.Client
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\macie\Documents\GitHub\gra_w_statki\GraWStatki\Statki.Client\App.xaml
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\kubac\Documents\GitHub\AI\gra_w_statki\GraWStatki\Statki.Client\App.xaml
 2396499192
 
 7-1748935026
-199-1480547060
+199-1370820530
 GameWindow.xaml;MainWindow.xaml;
 
-True
+False
 

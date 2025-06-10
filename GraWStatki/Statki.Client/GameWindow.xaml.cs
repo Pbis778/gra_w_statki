@@ -1,5 +1,7 @@
 ﻿using Statki.Shared.Models;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Sockets;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +22,7 @@ namespace Statki.Client
         private Direction currentDirection = Direction.Horizontal;
         private bool placingShipsMode = true;
         private List<Button> previewedCells = new();
+        private List<Position> invalidPlacementPositions = new(); // Dodana lista
 
         private readonly List<int> shipsToPlace = new() { 4, 3, 3, 2, 2, 2, 1, 1, 1, 1 };
 
@@ -113,6 +116,9 @@ namespace Statki.Client
                     cell.Background = Brushes.DarkBlue;
             }
 
+            // Dodanie pól wokół statku jako niedostępne
+            MarkSurroundingCellsAsInvalid(ship);
+
             previewedCells.Clear();
             shipsPlaced++;
 
@@ -120,10 +126,52 @@ namespace Statki.Client
             {
                 placingShipsMode = false;
                 MessageBox.Show("Wszystkie statki rozmieszczone!");
+                ResetAllInvalidPlacementColors();
             }
             else
             {
                 currentShipLength = shipsToPlace[shipsPlaced];
+            }
+        }
+
+        private void ResetAllInvalidPlacementColors()
+        {
+            for (int y = 0; y < GameBoard.Size; y++)
+            {
+                for (int x = 0; x < GameBoard.Size; x++)
+                {
+                    var position = new Position { X = x, Y = y };
+                    var cell = GetCellAt(PlayerGrid, x, y);
+                    if (cell != null && cell.Background == Brushes.Red) // Sprawdź, czy komórka jest czerwona
+                    {
+                            cell.Background = Brushes.LightBlue; // Domyślny kolor
+                    }
+                }
+            }
+        }
+
+        private void MarkSurroundingCellsAsInvalid(Ship ship)
+        {
+            foreach (var pos in ship.Positions)
+            {
+                for (int x = pos.X - 1; x <= pos.X + 1; x++)
+                {
+                    for (int y = pos.Y - 1; y <= pos.Y + 1; y++)
+                    {
+                        if (GameBoard.IsInBounds(x, y) && !ship.Positions.Any(p => p.X == x && p.Y == y))
+                        {
+                            if (!invalidPlacementPositions.Any(p => p.X == x && p.Y == y))
+                            {
+                                invalidPlacementPositions.Add(new Position { X = x, Y = y });
+                                var cell = GetCellAt(PlayerGrid, x, y);
+                                if (cell != null)
+                                {
+                                    cell.Background = Brushes.Red; // Opcjonalnie: wizualne oznaczenie
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -146,7 +194,7 @@ namespace Statki.Client
                 int x = direction == Direction.Horizontal ? startX + i : startX;
                 int y = direction == Direction.Vertical ? startY + i : startY;
 
-                if (!GameBoard.IsInBounds(x, y) || _playerBoard.IsOccupied(x, y))
+                if (!GameBoard.IsInBounds(x, y) || _playerBoard.IsOccupied(x, y) || invalidPlacementPositions.Any(p => p.X == x && p.Y == y))
                     return null;
 
                 positions.Add(new Position { X = x, Y = y });
@@ -168,6 +216,11 @@ namespace Statki.Client
             if (placingShipsMode && e.Key == Key.R)
             {
                 currentDirection = currentDirection == Direction.Horizontal ? Direction.Vertical : Direction.Horizontal;
+                // Odśwież podświetlenie, aby uwzględnić zmianę kierunku
+                if (Mouse.DirectlyOver is Button btn && btn.Tag is ValueTuple<int, int> coords)
+                {
+                    PlayerGrid_HighlightPreview(btn, new MouseEventArgs(Mouse.PrimaryDevice, Environment.TickCount));
+                }
             }
         }
 
