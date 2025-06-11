@@ -20,6 +20,9 @@ namespace Statki.Shared.Models
         //sprawdzanie czy wszystkie elementy statku zostały trafione
         public bool IsSunk => Positions.All(p => p.IsHit);
 
+        //konstruktor bezparametrowy
+        public Ship() { }
+
         public Ship(int startX, int startY, int length, Direction direction)
         {
             Length = length;

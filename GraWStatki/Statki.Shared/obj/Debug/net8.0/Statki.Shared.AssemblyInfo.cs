@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Statki.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74fab069964f146f65b622755b01345307f53683")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfc7f961fc77186b52829f7cbf8deaec2f46d895")]
 [assembly: System.Reflection.AssemblyProductAttribute("Statki.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Statki.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

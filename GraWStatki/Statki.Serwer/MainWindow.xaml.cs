@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Statki.Shared.Models;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -14,6 +16,9 @@ namespace Statki.Serwer
         private readonly List<TcpClient> clients = new List<TcpClient>();
         private readonly List<NetworkStream> streams = new List<NetworkStream>();
         private const int MaxClients = 2;
+        GameBoard[] boards = new GameBoard[2];
+        private bool[] isReady = new bool[2];
+        private int currentPlayerIndex = 0;
 
         public MainWindow()
         {
@@ -51,6 +56,7 @@ namespace Statki.Serwer
 
                     clients.Add(newClient);
                     var stream = newClient.GetStream();
+                    streams.Add(stream);
 
                     if (clients.Count == 1)
                     {
@@ -92,19 +98,81 @@ namespace Statki.Serwer
                     string message = Encoding.UTF8.GetString(buffer, 0, length);
                     Log($"Odebrano: {message}");
 
-                    foreach (var s in streams)
+                    int playerIndex = clients.IndexOf(client);
+
+                    if (message.StartsWith("BOARD "))
                     {
-                        if (s != stream)
+                        string json = message.Substring("BOARD ".Length);
+                        var options = new JsonSerializerOptions
                         {
-                            byte[] responseData = Encoding.UTF8.GetBytes(message);
-                            await s.WriteAsync(responseData, 0, responseData.Length);
+                            PropertyNameCaseInsensitive = true,
+                            IncludeFields = true
+                        };
+                        List<Ship> ships = JsonSerializer.Deserialize<List<Ship>>(json, options);
+
+                        if (boards[playerIndex] == null)
+                            boards[playerIndex] = new GameBoard();
+
+                        boards[playerIndex].Ships = ships;
+                        Log($"Gracz {playerIndex + 1} przesłał statki.");
+                        isReady[playerIndex] = true;
+
+                        if (isReady[0] && isReady[1])
+                        {
+                            currentPlayerIndex = 0;
+
+                            await streams[0].WriteAsync(Encoding.UTF8.GetBytes("YOUR_TURN"));
+                            await streams[1].WriteAsync(Encoding.UTF8.GetBytes("WAIT_TURN"));
+
+                            Log("Gra się rozpoczęła!");
                         }
+                    }
+                    else if (message.StartsWith("FIRE "))
+                    {
+                        if (playerIndex != currentPlayerIndex)
+                        {
+                            await streams[playerIndex].WriteAsync(Encoding.UTF8.GetBytes("WAIT_TURN"));
+                            continue;
+                        }
+
+                        int opponentIndex = 1 - playerIndex;
+                        string[] parts = message.Split(' ');
+                        string[] xy = parts[1].Split(',');
+
+                        int x = int.Parse(xy[0]);
+                        int y = int.Parse(xy[1]);
+
+                        var (isHit, isSunk, hitShip) = boards[opponentIndex].ReceiveShot(x, y);
+
+                        string resultType = isHit ? (isSunk ? "SUNK" : "HIT") : "MISS";
+                        string resultMsg = $"{resultType} {x},{y}";
+
+                        if (boards[opponentIndex].AllShipsSunk())
+                        {
+                            await streams[playerIndex].WriteAsync(Encoding.UTF8.GetBytes($"WIN {x},{y}"));
+                            await streams[opponentIndex].WriteAsync(Encoding.UTF8.GetBytes($"LOSE {x},{y}"));
+                            Log($"Gracz {playerIndex + 1} wygrał!");
+                            continue;
+                        }
+
+                        await streams[playerIndex].WriteAsync(Encoding.UTF8.GetBytes(resultMsg));
+                        await streams[opponentIndex].WriteAsync(Encoding.UTF8.GetBytes(resultMsg));
+
+                        if (!isHit)
+                            currentPlayerIndex = opponentIndex;
+
+                        await streams[currentPlayerIndex].WriteAsync(Encoding.UTF8.GetBytes("YOUR_TURN"));
+                        await streams[1 - currentPlayerIndex].WriteAsync(Encoding.UTF8.GetBytes("WAIT_TURN"));
+                    }
+                    else
+                    {
+                        Log($"Nieznana wiadomość: {message}");
                     }
                 }
             }
             catch (Exception ex)
             {
-                Log("Połączenie zakończone. " + ex.Message);
+                Log("Połączenie zakończone: " + ex.Message);
             }
             finally
             {
@@ -116,6 +184,7 @@ namespace Statki.Serwer
                 Log($"Gracz {index + 1} odłączony.");
             }
         }
+
 
         private void Log(string message)
         {

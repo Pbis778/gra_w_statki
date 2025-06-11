@@ -1,62 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\",
+  "WorkspaceRootPath": "C:\\Users\\pbist\\OneDrive\\Dokumenty\\GitHub\\gra_w_statki\\GraWStatki\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.client\\gamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|c:\\users\\pbist\\onedrive\\dokumenty\\github\\gra_w_statki\\grawstatki\\statki.client\\gamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|solutionrelative:statki.client\\gamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.client\\gamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|solutionrelative:statki.client\\gamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.client\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|solutionrelative:statki.client\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.serwer\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|solutionrelative:statki.serwer\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.shared\\models\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|c:\\users\\pbist\\onedrive\\dokumenty\\github\\gra_w_statki\\grawstatki\\statki.shared\\models\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|solutionrelative:statki.shared\\models\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.shared\\models\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|solutionrelative:statki.shared\\models\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|c:\\users\\pbist\\onedrive\\dokumenty\\github\\gra_w_statki\\grawstatki\\statki.serwer\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|solutionrelative:statki.serwer\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.shared\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|solutionrelative:statki.shared\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.shared\\networking\\networkmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|solutionrelative:statki.shared\\networking\\networkmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.shared\\game\\gameconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C5B8BBE-6A7A-4C37-82F5-A08BA21EEBC8}|Statki.Shared\\Statki.Shared.csproj|solutionrelative:statki.shared\\game\\gameconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.client\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|solutionrelative:statki.client\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.serwer\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|solutionrelative:statki.serwer\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.serwer\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|solutionrelative:statki.serwer\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.serwer\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|c:\\users\\pbist\\onedrive\\dokumenty\\github\\gra_w_statki\\grawstatki\\statki.serwer\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A9E595BD-B24C-4060-9061-EBCFA149066F}|Statki.Serwer\\Statki.Serwer.csproj|solutionrelative:statki.serwer\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|c:\\users\\kubac\\documents\\github\\ai\\gra_w_statki\\grawstatki\\statki.client\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128DBE64-3B36-4B92-9116-140525B89149}|Statki.Client\\Statki.Client.csproj|solutionrelative:statki.client\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,181 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "GameBoard.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Models\\GameBoard.cs",
+              "DocumentMoniker": "C:\\Users\\pbist\\OneDrive\\Dokumenty\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Shared\\Models\\GameBoard.cs",
               "RelativeDocumentMoniker": "Statki.Shared\\Models\\GameBoard.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Models\\GameBoard.cs",
+              "ToolTip": "C:\\Users\\pbist\\OneDrive\\Dokumenty\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Shared\\Models\\GameBoard.cs",
               "RelativeToolTip": "Statki.Shared\\Models\\GameBoard.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAcwB0AAABKAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T10:44:37.145Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Serwer\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Statki.Serwer\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Serwer\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Statki.Serwer\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:52:12.01Z",
+              "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Serwer\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Statki.Serwer\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Serwer\\App.xaml.cs",
-              "RelativeToolTip": "Statki.Serwer\\App.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:52:37.411Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Statki.Client\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Statki.Client\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAAIgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:52:39.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Statki.Client\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\MainWindow.xaml",
-              "RelativeToolTip": "Statki.Client\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T10:53:23.187Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "GameWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\GameWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pbist\\OneDrive\\Dokumenty\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Client\\GameWindow.xaml.cs",
               "RelativeDocumentMoniker": "Statki.Client\\GameWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\GameWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\pbist\\OneDrive\\Dokumenty\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Client\\GameWindow.xaml.cs",
               "RelativeToolTip": "Statki.Client\\GameWindow.xaml.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAmwIoAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAACsBAAAAAAAAAAAAADcBAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:49:48.158Z",
+              "WhenOpened": "2025-06-11T12:37:26.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\GameWindow.xaml",
-              "RelativeDocumentMoniker": "Statki.Client\\GameWindow.xaml",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\GameWindow.xaml",
-              "RelativeToolTip": "Statki.Client\\GameWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-26T16:29:08.527Z",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pbist\\OneDrive\\Dokumenty\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Serwer\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Statki.Serwer\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\pbist\\OneDrive\\Dokumenty\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Serwer\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Statki.Serwer\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAwwGEAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:04:52.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NetworkMessage.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Networking\\NetworkMessage.cs",
-              "RelativeDocumentMoniker": "Statki.Shared\\Networking\\NetworkMessage.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Networking\\NetworkMessage.cs",
-              "RelativeToolTip": "Statki.Shared\\Networking\\NetworkMessage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:49:57.621Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Ship.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Models\\Ship.cs",
-              "RelativeDocumentMoniker": "Statki.Shared\\Models\\Ship.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Models\\Ship.cs",
-              "RelativeToolTip": "Statki.Shared\\Models\\Ship.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:51:34.94Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GameConfig.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Game\\GameConfig.cs",
-              "RelativeDocumentMoniker": "Statki.Shared\\Game\\GameConfig.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Game\\GameConfig.cs",
-              "RelativeToolTip": "Statki.Shared\\Game\\GameConfig.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:51:58.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Position.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Models\\Position.cs",
-              "RelativeDocumentMoniker": "Statki.Shared\\Models\\Position.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Shared\\Models\\Position.cs",
-              "RelativeToolTip": "Statki.Shared\\Models\\Position.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:51:44.306Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Serwer\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "Statki.Serwer\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Serwer\\AssemblyInfo.cs",
-              "RelativeToolTip": "Statki.Serwer\\AssemblyInfo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:52:35.416Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Serwer\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\pbist\\OneDrive\\Dokumenty\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Serwer\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Statki.Serwer\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Serwer\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\pbist\\OneDrive\\Dokumenty\\GitHub\\gra_w_statki\\GraWStatki\\Statki.Serwer\\MainWindow.xaml",
               "RelativeToolTip": "Statki.Serwer\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-09T10:55:43.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Statki.Client\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\kubac\\Documents\\GitHub\\AI\\gra_w_statki\\GraWStatki\\Statki.Client\\App.xaml.cs",
-              "RelativeToolTip": "Statki.Client\\App.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T10:49:45.344Z"
             }
           ]
         }
